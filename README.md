@@ -176,32 +176,45 @@ int main() {
     int num_rows;
 
     printf("Enter a string: ");
-    scanf("%s", str);
+    scanf("%s",str);
 
-    printf("Enter number of rows: ");
-    scanf("%d", &num_rows);
+    //printf("Enter number of rows: ");
+    //scanf("%d",&num_rows);
 
     int len = strlen(str);
-
-    for (int i = 1; i <= num_rows; i++) {
-        for (int space = 1; space <= num_rows - i; space++) {
-            printf("  "); 
+    int sp=10;
+    int k=0;
+    int y=0;
+    for (int i = 1; i <=5; i++)
+	 {
+        for (int space = 1; space <= sp; space++)
+		 {
+            printf(" ");
         }
 
-        for (int j = 0; j < len; j++) {
-            printf("%c ", str[j]);
+        for (int j = 0; j<=y; j++)
+		 {
+            printf("%c", str[k]);
+            k++;
+            if(str[k]=='\0')
+               k=0;
         }
 
         printf("\n");
+      sp-= 1; 
+      y+=2;
     }
 
     return 0;
 }
 
+
 ```
 
  ## OUTPUT
-![OUTPUT](./outputs/img4.png)
+![image](https://github.com/user-attachments/assets/3c5cf2a9-2613-4b09-8091-b65ca5abcb8d)
+
+
  
 
 ## RESULT
